@@ -1,0 +1,53 @@
+<!-- Tamaño -->
+
+<body>
+    <!--<img srcset="
+    ./assets/arches-300.jpg,
+    ./assets/arches-600.jpg 2x,
+    ./assets/arches-1200.jpg 3x" 
+    src="./assets/arches-300.jpg" alt="Arches">-->
+    <!--El src es como un copia de seguridad por si el navegador no acepta las demas imagenes-->
+    <!-------------------------------------------------------------------------------------------->
+    <!--Usando sizes-->
+
+    <!--<img src="./assets/arches-300.jpg"
+    srcset="
+    ./assets/arches-300.jpg 300w,
+    ./assets/arches-600.jpg 600w,
+    ./assets/arches-1200.jpg 1200w" 
+    sizes="
+    (max-width: 600px) 300px,
+    (max-width: 900px) 600px,
+    (max-width: 1200px) 1200px,
+    100vw"
+    alt="Arches"> -->
+    <!--El maximo de px de la pantalla al que mostrará la imagen deseada, por ejemplo:
+    (max-width: 600px) 300px, la imagen de 300px se mostrará simepre y 
+    cuando la pantalla no se pase de 600px o sea tiene que ser menor que 600px-->
+
+    <!--<img src="./assets/arches-300.jpg"
+    srcset="
+    ./assets/arches-300.jpg 300w,
+    ./assets/arches-600.jpg 600w,
+    ./assets/arches-1200.jpg 1200w" 
+    sizes="
+    (min-width: 900px) 1200px,
+    (min-width: 600px) 600px,
+    (min-width: 300px) 300px,
+    100vw"
+    alt="Arches"> -->
+    <!--El minimo de px de la pantalla al que mostrará la imagen deseada, por ejemplo:
+    (min-width: 900px) 1200px, la imagen de 1200px se mostrará siempre y cuando la resolución
+    de pantalla sea mayor que 900px -->
+    <!-------------------------------------------------------------------------------------------->
+    <!--Etiqueta picture-->
+
+    <picture>
+        <!--<source srcset="
+        ./assets/arches-300.jpg,
+        ./assets/arches-600.jpg 2x">-->
+        <!--siempre debemos añadir la etiqueta <img> ya que es como un fallback(copia de seguridad)-->
+            <source srcset="./assets/arches-600.jpg" media="(min-width: 600px)">
+        <img src="./assets/arches-300.jpg" alt="Arches">
+    </picture>
+</body>
